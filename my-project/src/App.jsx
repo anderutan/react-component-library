@@ -1,6 +1,8 @@
 import Badge from './components/Badge';
 import Banner from './components/Banner';
+import Card from './components/Card';
 import FlexContainer from './components/FlexContainer';
+import CloudDownIcon from './images/CloudDownIcon';
 
 function App() {
   const colorList = [
@@ -20,21 +22,25 @@ function App() {
       <h1 className='text-2xl mb-3 font-bold underline'>
         React Component Library
       </h1>
-      <h2 className='mb-2 font-bold'>Square Badges Design</h2>
+      <h2 className='mb-2 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
+        Square Badges Design
+      </h2>
       <FlexContainer>
         {colorList.map((color) => (
           <div className='flex flex-col'>
-            <p className='capitalize text-xxs text-gray-400'>{`${color} - Square`}</p>
+            <p className='capitalize text-xs text-gray-400'>{`${color} - Square`}</p>
             <Badge color={color}>Badge</Badge>
           </div>
         ))}
       </FlexContainer>
 
-      <h2 className='mb-2 mt-7 font-bold'>Pill Badges Design</h2>
+      <h2 className='mb-2 mt-10 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
+        Pill Badges Design
+      </h2>
       <FlexContainer>
         {colorList.map((color) => (
           <div className='flex flex-col'>
-            <p className='capitalize text-xxs text-gray-400'>{`${color} - Pill`}</p>
+            <p className='capitalize text-xs text-gray-400'>{`${color} - Pill`}</p>
             <Badge color={color} borderRadius>
               Badge
             </Badge>
@@ -42,24 +48,43 @@ function App() {
         ))}
       </FlexContainer>
 
-      <h2 className='mb-2 mt-7 font-bold'>Banners Design - Single Line</h2>
+      <h2 className='mb-2 mt-10 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
+        Banners Design - Single Line
+      </h2>
       {statusList.map((status) => (
-        <div className='flex flex-col mt-5'>
-          <p className='capitalize text-xxs text-gray-400'>{`${status} - Singleline`}</p>
+        <div className='flex flex-col my-5'>
+          <p className='capitalize text-sm text-gray-400'>{`${status} - Singleline`}</p>
           <Banner status={status}></Banner>
         </div>
       ))}
 
-      <h2 className='mb-2 mt-7 font-bold'>Banners Design - Multi Line</h2>
+      <h2 className='mb-2 mt-10 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
+        Banners Design - Multi Line
+      </h2>
       {statusList.map((status) => (
-        <div className='flex flex-col mt-5'>
-          <p className='capitalize text-xxs text-gray-400'>{`${status} - Multiline`}</p>
+        <div className='flex flex-col my-5'>
+          <p className='capitalize text-sm text-gray-400'>{`${status} - Multiline`}</p>
           <Banner status={status}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
             pariatur, ipsum similique veniam quo totam eius aperiam dolorum.
           </Banner>
         </div>
       ))}
+
+      <h2 className='mb-2 mt-10 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
+        Cards Design
+      </h2>
+      <FlexContainer>
+        <div className='flex flex-col mt-5'>
+          <p className='capitalize text-sm text-gray-400'>{`Default Style`}</p>
+          <Card />
+        </div>
+
+        <div className='flex flex-col mt-5 ml-5'>
+          <p className='capitalize text-sm text-gray-400'>{`With icon and color prop`}</p>
+          <Card icon={<CloudDownIcon />} color='yellow' />
+        </div>
+      </FlexContainer>
     </div>
   );
 }

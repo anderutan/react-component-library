@@ -8,7 +8,11 @@ export default {
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0px 4px 25px 0px rgba(0, 0, 0, 0.10)',
+      },
+    },
   },
   plugins: [],
 };
