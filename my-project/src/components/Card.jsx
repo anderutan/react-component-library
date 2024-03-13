@@ -9,10 +9,7 @@ export default function Card({ icon, color = 'blue', children }) {
         {icon ? icon : <CloudIcon />}
       </div>
       <p className='font-bold text-xl mb-5 mt-7'>Easy Deployment</p>
-      <p className='text-sm text-center'>
-        Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna
-        sit morbi lobortis.
-      </p>
+      <p className='text-sm text-center'>{children}</p>
     </div>
   );
 }
