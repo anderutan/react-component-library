@@ -110,9 +110,11 @@ function App() {
       <h2 className='mb-2 mt-10 font-bold bg-gray-600 text-white inline-block px-2 py-1'>
         Testimonials
       </h2>
-      {Object.values(testimonialsList).map((testimonial) => (
-        <Testimonials key={testimonial.name} testimonial={testimonial} />
-      ))}
+      <FlexContainer>
+        {Object.values(testimonialsList).map((testimonial) => (
+          <Testimonials key={testimonial.name} testimonial={testimonial} />
+        ))}
+      </FlexContainer>
     </div>
   );
 }
