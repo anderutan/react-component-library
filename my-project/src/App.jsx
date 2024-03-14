@@ -31,6 +31,15 @@ function App() {
       photo: portraitPhoto,
       logo: companyLogo,
     },
+    may2: {
+      quote:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit. ',
+      name: 'May Andersons',
+      position: 'CTO',
+      company: 'Workcation',
+      photo: '',
+      logo: companyLogo,
+    },
   };
   return (
     <div className='p-5 font-roboto'>
